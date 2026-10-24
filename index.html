@@ -4,35 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farag Loves Kabaka</title>
+
+    <title>My First Website</title>
+
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
+            font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #141e30, #243b55);
             color: white;
-            font-family: Arial, sans-serif;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            margin: 0;
-        }
-
-        h1 {
-            font-size: 45px;
-            color: #00e5ff;
         }
 
         .container {
             padding: 40px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #00e5ff;
+        }
+
+        p {
+            font-size: 22px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 10px;
+            background: #00e5ff;
+            color: #141e30;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+
+        #message {
+            margin-top: 25px;
+            font-size: 20px;
+            color: #7CFFB2;
         }
     </style>
 </head>
+
 <body>
+
     <div class="container">
-        <h1>Farag Loves Kabaka!</h1>
-        <p>This is the truth! 😂❤️</p>
+        <h1>Farag Loves Everyone!</h1>
+
+        <p>
+            Welcome to my first website.
+            This is just a little experiment!
+        </p>
+
+        <button onclick="showMessage()">
+            Click Me!
+        </button>
+
+        <div id="message"></div>
     </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").textContent =
+                "Farag loves everyone! ❤️";
+        }
+    </script>
+
 </body>
 </html>
 ```
